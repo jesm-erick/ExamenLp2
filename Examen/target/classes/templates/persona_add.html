@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>CRUDSpring</title>
+  </head>
+  <body>
+   <div class="container mt-4">
+	<div class="col-sm-8">
+		<form th:action="@{/save}" th:object=${persona}>
+		<div class="card">
+			<div class="card-header">
+				<h3>Modulo Persona</h3>
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<label>ID</label>
+					<input th:field="*{id}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Nombres</label>
+					<input th:field="*{nombres}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Apellidos</label>
+					<input th:field="*{apellidos}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Dni</label>
+					<input th:field="*{dni}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Celular</label>
+					<input th:field="*{celular}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Dirección</label>
+					<input th:field="*{direccion}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input th:field="*{email}" type="text" class="form-control"/>
+				</div>
+				<div class="form-group" >
+					<label>Sexo</label>
+					<form>
+						<select name="sexo" class="form-control" type="text">
+							<option>Masculino</option>
+							<option>Femenino</option>
+						</select>
+					</form>
+				</div>
+			</div>
+			<div class="card-footer">
+				<input type="submit" value="Guardar" class="btn btn-success"/>
+				<a th:href="@{/listar/}" class="btn btn-primary">Cancelar</a>
+			</div>
+		</div>
+		</form>
+	</div>
+   </div>
+  </body>
+</html>
